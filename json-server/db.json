@@ -1,0 +1,27 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "title": "okay",
+            "author": "Name",
+            "catgories": "type",
+            "type": "Books",
+            "code": "123456789",
+            "price": 800,
+            "discount": 200,
+            "quantity": 40,
+            "rate": [
+                {
+                    "user1": 5
+                },
+                {
+                    "user2": 4
+                },
+                {
+                    "user3": 5
+                }
+            ],
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHoIAo4PGeRTUAIUEmOfAXS-yTVlxTsPv25h9W-FeqwnWIw3tM"
+        }
+    ]
+}
