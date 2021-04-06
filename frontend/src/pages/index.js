@@ -7,6 +7,7 @@ import NewGoodsPage from './newGoodsPage'
 import RecomPage from './recomPage'
 import DiscountPage from './discountPage'
 import BestSalePage from './bestSalePage'
+import Detail from './detail'
 
 const OrderContext = createContext()
 
@@ -40,6 +41,9 @@ const Index = () => {
                             <Route path="/recommend">
                                 <RecomPage />
                             </Route>
+                            <Route path="/detail">
+                                <Detail />
+                            </Route>
                         </Switch>
                     </ContentBox>
                 </OrderContext.Provider>
@@ -49,9 +53,8 @@ const Index = () => {
 }
 
 const ContentBox = styled.div`
-    width: 90%;
+    width: 100%;
     height: 100%;
-    margin: 100px 5% 0 5%;
 `
 
 export default Index

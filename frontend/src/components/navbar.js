@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { deviceJs } from '../tools/tools'
 import BoxLink from '../components/btnNav'
 
 
 const Navbar = () => {
     return (
-        <Pakage>
+        <Package>
             <NavigateBar>
                 <BoxBtn>
                     <BoxLink title={"Book"} link={""} main={"mainBox"} />
@@ -17,11 +16,11 @@ const Navbar = () => {
                 </BoxBtn>  
             </NavigateBar>
             <ShadowBottom />
-        </Pakage>
+        </Package>
     )
 }
 
-const Pakage = styled.div`
+const Package = styled.div`
     width: 100%;
     position: fixed;
     top: 0;
