@@ -1,12 +1,12 @@
 import React, {createContext, useContext, useState} from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from '../components/navbar'
-import styled from 'styled-components'
 import Home from './home'
 import NewGoodsPage from './newGoodsPage'
 import RecomPage from './recomPage'
 import DiscountPage from './discountPage'
 import BestSalePage from './bestSalePage'
+import '../styles/styleUniversal.css'
 
 const OrderContext = createContext()
 
@@ -23,7 +23,7 @@ const Index = () => {
             <Router>
                 <OrderContext.Provider value={{addOrder}}>
                     <NavBar />
-                    <ContentBox >
+                    <div className="ContentBox" >
                         <Switch>
                             <Route exact path="/">
                                 <Home />
@@ -41,18 +41,12 @@ const Index = () => {
                                 <RecomPage />
                             </Route>
                         </Switch>
-                    </ContentBox>
+                    </div>
                 </OrderContext.Provider>
             </Router>
         
     )
 }
-
-const ContentBox = styled.div`
-    width: 90%;
-    height: 100%;
-    margin: 100px 5% 0 5%;
-`
 
 export default Index
 

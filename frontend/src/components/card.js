@@ -44,40 +44,49 @@ const Box = styled.div`
 const BoxCard = styled.div`
     display: flex;
     width: 300px;
+    height: 340px;
     overflow: hidden;
     flex-direction: column;
+    flex-shrink: 0;
+    transition: 0.5s;
+    :hover{
+        box-shadow: 0.2vw 0.2vw 0.8vw #aaaaaa;
+        z-index: 2;
+        transform: scaleY(1.3);
+
+    }
 `
 
 const StateGoods = styled.div`
     background: red;
-    height: 20px;
+    height: 5%;
     
 `
 
 const ImageBox = styled(Box)`
-    height: 150px;
+    height: 40%;
     background: blue;
     
 `
 
 const RateBox = styled(Box)`
     background: red;
-    height: 20px;
+    height: 5%;
 `
 
 const TitleBox = styled(Box)`
     background: blue;
-    height: 20px;
+    height: 5%;
 `
 
 const PriceBox = styled(Box)`
     background: red;
-    height: 50px;
+    height: 10%;
 `
 
 const DiscountBox = styled(Box)`
     background: blue;
-    height: 80px;
+    height: 15%;
 `
 
 
