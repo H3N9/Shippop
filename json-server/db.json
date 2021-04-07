@@ -2,240 +2,291 @@
     "books": [
         {
             "id": 1,
-            "title": "okay",
-            "author": "Name",
-            "catgories": "type",
+            "title": "A BRIEF HISTORY OF TIME",
+            "author": "Stephen Hawking",
+            "catgories": "cosmology",
             "type": "Books",
             "code": "123456789",
-            "price": 800,
-            "discount": 200,
+            "price": 800.00,
+            "discount": 200.00,
             "quantity": 40,
+            "publisher": "Cambridge",
             "description": "yes yes",
-            "rate": [
+            "rates": [
                 {
-                    "user1": 5
+                    "id": 1,
+                    "rate": 5
                 },
                 {
-                    "user2": 4
+                    "id": 2,
+                    "rate": 5
                 },
                 {
-                    "user3": 5
+                    "id": 3,
+                    "rate": 5
                 }
             ],
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHoIAo4PGeRTUAIUEmOfAXS-yTVlxTsPv25h9W-FeqwnWIw3tM"
         },
         {
             "id": 2,
-            "title": "okay",
-            "author": "Name",
-            "catgories": "type",
+            "title": "A BRIEF HISTORY OF TIME",
+            "author": "Stephen Hawking",
+            "catgories": "cosmology",
             "type": "Books",
             "code": "123456789",
-            "price": 800,
-            "discount": 200,
+            "price": 800.00,
+            "discount": 200.00,
             "quantity": 40,
+            "publisher": "Cambridge",
             "description": "yes yes",
-            "rate": [
+            "rates": [
                 {
-                    "user1": 5
+                    "id": 1,
+                    "rate": 1
                 },
                 {
-                    "user2": 4
+                    "id": 2,
+                    "rate": 1
                 },
                 {
-                    "user3": 5
+                    "id": 3,
+                    "rate": 5
                 }
             ],
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHoIAo4PGeRTUAIUEmOfAXS-yTVlxTsPv25h9W-FeqwnWIw3tM"
         },
         {
             "id": 3,
-            "title": "okay",
-            "author": "Name",
-            "catgories": "type",
+            "title": "A BRIEF HISTORY OF TIME",
+            "author": "Stephen Hawking",
+            "catgories": "cosmology",
             "type": "Books",
             "code": "123456789",
-            "price": 800,
-            "discount": 200,
+            "price": 800.00,
+            "discount": 200.00,
             "quantity": 40,
+            "publisher": "Cambridge",
             "description": "yes yes",
-            "rate": [
+            "rates": [
                 {
-                    "user1": 5
+                    "id": 1,
+                    "rate": 3
                 },
                 {
-                    "user2": 4
+                    "id": 2,
+                    "rate": 3
                 },
                 {
-                    "user3": 5
+                    "id": 3,
+                    "rate": 3
                 }
             ],
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHoIAo4PGeRTUAIUEmOfAXS-yTVlxTsPv25h9W-FeqwnWIw3tM"
         },
         {
             "id": 4,
-            "title": "okay",
-            "author": "Name",
-            "catgories": "type",
+            "title": "A BRIEF HISTORY OF TIME",
+            "author": "Stephen Hawking",
+            "catgories": "cosmology",
             "type": "Books",
             "code": "123456789",
-            "price": 800,
-            "discount": 200,
+            "price": 800.00,
+            "discount": 200.00,
             "quantity": 40,
+            "publisher": "Cambridge",
             "description": "yes yes",
-            "rate": [
+            "rates": [
                 {
-                    "user1": 5
+                    "id": 1,
+                    "rate": 5
                 },
                 {
-                    "user2": 4
+                    "id": 2,
+                    "rate": 1
                 },
                 {
-                    "user3": 5
+                    "id": 3,
+                    "rate": 5
+                },
+                {
+                    "id": 4,
+                    "rate": 3
                 }
             ],
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHoIAo4PGeRTUAIUEmOfAXS-yTVlxTsPv25h9W-FeqwnWIw3tM"
         },
         {
             "id": 5,
-            "title": "okay",
-            "author": "Name",
-            "catgories": "type",
+            "title": "A BRIEF HISTORY OF TIME",
+            "author": "Stephen Hawking",
+            "catgories": "cosmology",
             "type": "Books",
             "code": "123456789",
-            "price": 800,
-            "discount": 200,
-            "quantity": 40,
+            "price": 800.00,
+            "discount": 0,
+            "quantity": 0,
             "description": "yes yes",
-            "rate": [
+            "rates": [
                 {
-                    "user1": 5
+                    "id": 1,
+                    "rate": 5
                 },
                 {
-                    "user2": 4
+                    "id": 2,
+                    "rate": 4
                 },
                 {
-                    "user3": 5
+                    "id": 3,
+                    "rate": 5
+                },
+                {
+                    "id": 4,
+                    "rate": 5
+                },
+                {
+                    "id": 5,
+                    "rate": 3
                 }
             ],
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHoIAo4PGeRTUAIUEmOfAXS-yTVlxTsPv25h9W-FeqwnWIw3tM"
         },
         {
             "id": 6,
-            "title": "okay",
-            "author": "Name",
-            "catgories": "type",
+            "title": "A BRIEF HISTORY OF TIME",
+            "author": "Stephen Hawking",
+            "catgories": "cosmology",
             "type": "Books",
             "code": "123456789",
-            "price": 800,
-            "discount": 200,
+            "price": 800.00,
+            "discount": 200.00,
             "quantity": 40,
+            "publisher": "Cambridge",
             "description": "yes yes",
-            "rate": [
+            "rates": [
                 {
-                    "user1": 5
+                    "id": 1,
+                    "rate": 5
                 },
                 {
-                    "user2": 4
+                    "id": 2,
+                    "rate": 4
                 },
                 {
-                    "user3": 5
+                    "id": 3,
+                    "rate": 5
                 }
             ],
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHoIAo4PGeRTUAIUEmOfAXS-yTVlxTsPv25h9W-FeqwnWIw3tM"
         },
         {
             "id": 7,
-            "title": "okay",
-            "author": "Name",
-            "catgories": "type",
+            "title": "A BRIEF HISTORY OF TIME",
+            "author": "Stephen Hawking",
+            "catgories": "cosmology",
             "type": "Books",
             "code": "123456789",
-            "price": 800,
-            "discount": 200,
+            "price": 800.00,
+            "discount": 200.00,
             "quantity": 40,
+            "publisher": "Cambridge",
             "description": "yes yes",
-            "rate": [
+            "rates": [
                 {
-                    "user1": 5
+                    "id": 1,
+                    "rate": 0
                 },
                 {
-                    "user2": 4
+                    "id": 2,
+                    "rate": 0
                 },
                 {
-                    "user3": 5
+                    "id": 3,
+                    "rate": 0
                 }
             ],
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHoIAo4PGeRTUAIUEmOfAXS-yTVlxTsPv25h9W-FeqwnWIw3tM"
         },
         {
             "id": 8,
-            "title": "okay",
-            "author": "Name",
-            "catgories": "type",
+            "title": "A BRIEF HISTORY OF TIME",
+            "author": "Stephen Hawking",
+            "catgories": "cosmology",
             "type": "Books",
             "code": "123456789",
-            "price": 800,
-            "discount": 200,
+            "price": 800.00,
+            "discount": 200.00,
             "quantity": 40,
+            "publisher": "Cambridge",
             "description": "yes yes",
-            "rate": [
+            "rates": [
                 {
-                    "user1": 5
+                    "id": 1,
+                    "rate": 5
                 },
                 {
-                    "user2": 4
+                    "id": 2,
+                    "rate": 4
                 },
                 {
-                    "user3": 5
+                    "id": 3,
+                    "rate": 5
                 }
             ],
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHoIAo4PGeRTUAIUEmOfAXS-yTVlxTsPv25h9W-FeqwnWIw3tM"
         },
         {
             "id": 9,
-            "title": "okay",
-            "author": "Name",
-            "catgories": "type",
+            "title": "A BRIEF HISTORY OF TIME",
+            "author": "Stephen Hawking",
+            "catgories": "cosmology",
             "type": "Books",
             "code": "123456789",
-            "price": 800,
-            "discount": 200,
+            "price": 800.00,
+            "discount": 200.00,
             "quantity": 40,
+            "publisher": "Cambridge",
             "description": "yes yes",
-            "rate": [
+            "rates": [
                 {
-                    "user1": 5
+                    "id": 1,
+                    "rate": 5
                 },
                 {
-                    "user2": 4
+                    "id": 2,
+                    "rate": 4
                 },
                 {
-                    "user3": 5
+                    "id": 3,
+                    "rate": 5
                 }
             ],
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHoIAo4PGeRTUAIUEmOfAXS-yTVlxTsPv25h9W-FeqwnWIw3tM"
         },
         {
             "id": 10,
-            "title": "okay",
-            "author": "Name",
-            "catgories": "type",
+            "title": "A BRIEF HISTORY OF TIME",
+            "author": "Stephen Hawking",
+            "catgories": "cosmology",
             "type": "Books",
             "code": "123456789",
-            "price": 800,
-            "discount": 200,
+            "price": 800.00,
+            "discount": 200.00,
             "quantity": 40,
+            "publisher": "Cambridge",
             "description": "yes yes",
-            "rate": [
+            "rates": [
                 {
-                    "user1": 5
+                    "id": 1,
+                    "rate": 5
                 },
                 {
-                    "user2": 4
+                    "id": 2,
+                    "rate": 4
                 },
                 {
-                    "user3": 5
+                    "id": 3,
+                    "rate": 5
                 }
             ],
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHoIAo4PGeRTUAIUEmOfAXS-yTVlxTsPv25h9W-FeqwnWIw3tM"

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Card from '../components/card'
-import {Title, Catgories, Box9p} from '../styles/styleComponents'
+import {Title, Box9p, TitleText} from '../styles/styleComponents'
 import {apiGateway} from '../tools/tools'
+import CatgoriesBooks from '../components/catgoriesBooks'
 
 
 
@@ -20,15 +21,8 @@ const Home = () => {
 
             </MainImage>
 
-            <Title></Title>
-                <Catgories>
-                    {books.map((book) => (<Card book={book} />))}
-                </Catgories>
-
-            <Title></Title>
-                <Catgories>
-                    {books.map((book) => (<Card book={book} />))}
-                </Catgories>
+            <CatgoriesBooks books={books} title={"สินค้าใหม่"}/>
+            <CatgoriesBooks books={books} title={"สินค้าแนะนำ"}/>
         </Box9p>
     )
 }

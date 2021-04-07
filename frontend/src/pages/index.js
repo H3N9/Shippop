@@ -8,6 +8,7 @@ import RecomPage from './recomPage'
 import DiscountPage from './discountPage'
 import BestSalePage from './bestSalePage'
 import Detail from './detail'
+import Cart from './cart'
 
 const OrderContext = createContext()
 
@@ -15,7 +16,8 @@ const Index = () => {
     const [order, setOrder] = useState([])
 
     const addOrder = (newOrder) => {
-        setOrder([...order, ...newOrder])
+        console.log(order)
+        setOrder([...order, newOrder])
     }
 
 
@@ -41,8 +43,11 @@ const Index = () => {
                             <Route path="/recommend">
                                 <RecomPage />
                             </Route>
-                            <Route path="/detail">
+                            <Route path="/detail/:bookId">
                                 <Detail />
+                            </Route>
+                            <Route path="/cart">
+                                <Cart />
                             </Route>
                         </Switch>
                     </ContentBox>
@@ -60,4 +65,4 @@ const ContentBox = styled.div`
 export default Index
 
 
-// export const useOrderContext = () => useContext(OrderContext)
+export const useOrderContext = () => useContext(OrderContext)
