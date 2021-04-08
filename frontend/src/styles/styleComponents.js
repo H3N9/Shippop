@@ -18,14 +18,23 @@ export const Catgories = styled.div`
 
 export const SpaceBox = styled.div`
     width: 100%;
-    height: 50px;
+    height: 100px;
 `
 
 export const Box9p = styled.div`
     width: 90%;
     height: 100%;
-    margin: 100px 5% 0 5%;
+    margin: 0 5% 0 5%;
 `
 export const TitleText = styled.h1`
     margin: 0;
+`
+
+export const Button = styled.button`
+    padding: 5px 60px 5px 60px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
 `

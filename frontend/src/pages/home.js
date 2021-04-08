@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import Card from '../components/card'
-import {Title, Box9p, TitleText} from '../styles/styleComponents'
+import {Box9p, SpaceBox} from '../styles/styleComponents'
 import {apiGateway} from '../tools/tools'
 import CatgoriesBooks from '../components/catgoriesBooks'
 
@@ -16,14 +15,17 @@ const Home = () => {
     }, [])
 
     return (
-        <Box9p> 
-            <MainImage>
+        <>
+            <SpaceBox />
+            <Box9p> 
+                <MainImage>
 
-            </MainImage>
+                </MainImage>
 
-            <CatgoriesBooks books={books} title={"สินค้าใหม่"}/>
-            <CatgoriesBooks books={books} title={"สินค้าแนะนำ"}/>
-        </Box9p>
+                <CatgoriesBooks books={books} title={"สินค้าใหม่"}/>
+                <CatgoriesBooks books={books} title={"สินค้าแนะนำ"}/>
+            </Box9p>
+        </>
     )
 }
 

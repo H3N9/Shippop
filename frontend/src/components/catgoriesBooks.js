@@ -10,7 +10,7 @@ const CatgoriesBooks = ({books, title}) => {
                 <TitleText>{title}</TitleText>
             </Title>
             <Catgories>
-                {books.map((book) => (<Card book={book} />))}
+                {books.map((book) => (<Card key={book.id} book={book} />))}
             </Catgories>
         </>
     )
