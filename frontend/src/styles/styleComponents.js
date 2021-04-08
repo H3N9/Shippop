@@ -37,4 +37,5 @@ export const Button = styled.button`
     outline: none;
     cursor: pointer;
     transition: 0.5s;
+    outline: none;
 `

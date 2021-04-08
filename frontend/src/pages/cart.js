@@ -2,8 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import {Title, TitleText, Box9p, SpaceBox} from '../styles/styleComponents'
 import CardCart from '../components/cardCart'
+import { useOrderContext } from '../pages/index'
+import {Link} from 'react-router-dom'
 
 const Cart = () => {
+    const { order, removeCart } = useOrderContext()
+
     return (
         <Box9p>
             <SpaceBox />
@@ -29,12 +33,14 @@ const Cart = () => {
                     </HeadTable>
 
                     <OrderBookBox>
-                        <CardCart book={{}}/>
+                        {order.map((book) => (<CardCart key={book.id} book={book}/>))}
                     </OrderBookBox>
 
                     <ButtonBox>
-                        <ButtonAdd>ซื้อสินค้าต่อไป</ButtonAdd>
-                        <ButtonDel>ล้างตระกร้าสินค้า</ButtonDel>
+                        <Link to="/">
+                            <ButtonAdd>ซื้อสินค้าต่อไป</ButtonAdd>
+                        </Link>
+                        <ButtonDel onClick={() => removeCart()}>ล้างตระกร้าสินค้า</ButtonDel>
                     </ButtonBox>
 
                 </CartInfo>

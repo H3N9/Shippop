@@ -9,6 +9,7 @@ import DiscountPage from './discountPage'
 import BestSalePage from './bestSalePage'
 import Detail from './detail'
 import Cart from './cart'
+import Payment from './payment'
 
 const OrderContext = createContext()
 
@@ -17,14 +18,18 @@ const Index = () => {
 
     const addOrder = (newOrder) => {
         console.log(order)
-        setOrder([...order, newOrder])
+        setOrder([...order, ...newOrder])
+    }
+
+    const removeCart = () => {
+        setOrder([])
     }
 
 
 
     return (
             <Router>
-                <OrderContext.Provider value={{addOrder}}>
+                <OrderContext.Provider value={{order:order, addOrder, removeCart}}>
                     <NavBar />
                     <ContentBox >
                         <Switch>
@@ -48,6 +53,9 @@ const Index = () => {
                             </Route>
                             <Route path="/cart">
                                 <Cart />
+                            </Route>
+                            <Route path="/payment">
+                                <Payment />
                             </Route>
                         </Switch>
                     </ContentBox>

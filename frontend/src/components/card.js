@@ -105,7 +105,7 @@ const Card = ({book}) => {
                 </ImageBox>
 
                 <AddCart>
-                    <Button onClick={() => addOrder(book)}>
+                    <Button onClick={() => addOrder([book])}>
                         <FontAwesomeIcon icon={['fas', 'shopping-cart']} />
                         {" AddCart"}
                     </Button>

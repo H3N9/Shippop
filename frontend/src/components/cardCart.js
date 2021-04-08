@@ -5,19 +5,20 @@ import stlyed from 'styled-components'
 
 const CardCart = ({book}) => {
     const {image, title, price, discount} = book
+    const priceWdiscount = price-discount
 
     return (
         <CardCartBox>
             <ImageTitleBox>
                 <ImageBox>
-
+                    <Image src={image} />
                 </ImageBox>
                 <TitleBox>
-
+                    {title}
                 </TitleBox>
             </ImageTitleBox>
             <TextBox>
-
+                {`THB${priceWdiscount.toFixed(2)}`}
             </TextBox>
             <TextBox>
                 
@@ -56,7 +57,7 @@ const ImageBox = styled.div`
 `
 
 const Image = styled.img`
-    height: 100%;
+    width: 100%;
 `
 
 

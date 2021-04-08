@@ -25,6 +25,7 @@ const Home = () => {
                 <CatgoriesBooks books={books} title={"สินค้าใหม่"}/>
                 <CatgoriesBooks books={books} title={"สินค้าแนะนำ"}/>
             </Box9p>
+            <SpaceBox />
         </>
     )
 }

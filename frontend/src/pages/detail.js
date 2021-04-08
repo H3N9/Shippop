@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import FacebookIcon from '../images/f.png'
 import GoogleIcon from '../images/m.png'
 import MailIcon from '../images/g.png'
+import { useOrderContext } from './index'
 
 
 const Detail = () => {
@@ -18,6 +19,7 @@ const Detail = () => {
     const url = "http://localhost:9000/books"
     const priceWdiscount = price-discount
     const [number, setNumber] = useState(0)
+    const { addOrder } = useOrderContext()
 
     useEffect(() => {
         apiGateway(url, setBooks)
@@ -69,7 +71,14 @@ const Detail = () => {
             <Box9p>
                 <DetailBox>
                     <ImageBox>
-
+                        <MainImageBox>
+                            <MainImage src={image} />
+                        </MainImageBox>
+                        <SecondImageBox>
+                            <SecondImage src={image} />
+                            <SecondImage src={image} />
+                        </SecondImageBox>
+                        
                     </ImageBox>
 
 
@@ -106,7 +115,9 @@ const Detail = () => {
 
                         <PackHandle>
                             {renderSetupNum(number)}
-                            <ButtonAdd>Add</ButtonAdd>
+                            <ButtonAdd onClick={() => addOrder(Array.from({length:number}, () => {
+                                return book
+                            }))}>Add</ButtonAdd>
                             <ButtonWish>
                                 <FontAwesomeIcon icon={['fas', 'heart']}/>
                                 Wishlist
@@ -148,6 +159,21 @@ const Detail = () => {
         </>
     )
 }
+const SecondImageBox = styled.div`
+    width: 100%;
+    display: flex;
+    background: white;
+`
+const SecondImage = styled.img`
+    width: 25%;
+    margin: 10px;
+
+`
+const MainImageBox = styled.div`
+    width: 100%;
+    padding-bottom: 20px;
+    
+`
 
 const TitleDetial = styled.div`
     width: 90%;
@@ -175,7 +201,9 @@ const DetailBox = styled.div`
 `
 const ImageBox = styled.div`
     width: clamp(500px, 40%, 1000px);
-    background-color: red;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
 `
 
 const InfoBox = styled.div`
@@ -320,6 +348,10 @@ const Underline = styled.div`
 
 const Ptext = styled.p`
     margin: 0;
+
+`
+const MainImage = styled.img`
+    width: 80%;
 
 `
 
