@@ -1,7 +1,7 @@
 # Installation
 #### yarn install in json-server and frontend
 #### So you can type yarn start in fontend and json-server after installed, yarn start at json-server before start at fontend.
-  
+## Cloud Link: https://shippop-frontend.herokuapp.com/ but this website doesn't use Apigateway. It run by itself.
   
 ## ข้อ 1 - Basic Javascript
 ### 1.1 ) เขียน function แสดงค่าทาง console โดย function รับ parameter 2 ตัว ได้แก่
@@ -30,3 +30,5 @@ Prevent redundant records
 Normalization
 เกิด Relation ที่ Weak Entity ที่จำเป็นต้องมี Strong Entity อยู้ด้วยนั้นซึ่งมันจะเป็นปัญหาการสร้าง Table แล้วไม่ได้ใช้อาจจะต้องใช้ 2NF เข้ามาแก้
 ```
+
+
