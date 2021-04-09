@@ -4,11 +4,13 @@ import BoxLink from '../components/btnNav'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import Stephen from '../images/stephen.jpg'
 import Modal from './modal'
+import {useOrderContext} from '../pages/index'
 
 
 const Navbar = () => {
     const [modal, setModal] = useState(false)
-
+    const { order } = useOrderContext()
+    const amount = order.length
 
     return (
         <>
@@ -28,6 +30,7 @@ const Navbar = () => {
                     </BoxButton>
                     <BoxButton onClick={() => setModal(!modal)}>
                         <FontAwesomeIcon icon={['fas', 'shopping-cart']} />
+                        <Circle>{amount}</Circle>
                     </BoxButton>
                     <BoxButton>
                         <Image src={Stephen} />
@@ -77,6 +80,7 @@ const BoxButton = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    position: relative;
 `
 
 const ShadowBottom = styled.div`
@@ -90,6 +94,19 @@ const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+`
+const Circle = styled.div`
+    border-radius: 50%;
+    position: absolute;
+    background: #003cff;
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -3px;
+    right: 5px;
 `
 
 export default Navbar

@@ -5,10 +5,10 @@ import {useLocation} from 'react-router-dom'
 import CatgoriesBooks from '../components/catgoriesBooks'
 import {apiGateway} from '../tools/tools'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import FacebookIcon from '../images/f.png'
-import GoogleIcon from '../images/m.png'
-import MailIcon from '../images/g.png'
+import FacebookIcon from '../images/facebook.png'
+import GoogleIcon from '../images/google-plus.png'
 import { useOrderContext } from './index'
+import UpNumber from '../components/upNumber'
 
 
 const Detail = () => {
@@ -36,24 +36,6 @@ const Detail = () => {
         console.log(n)
     }
 
-    const renderSetupNum = (n) => {
-
-        return (
-            <PackNumber>
-                <PackText>
-                    {n}
-                </PackText>
-                <PackButton>
-                    <IncreaseBox onClick={() => handleNumber(number, "Increase")} >
-                        <FontAwesomeIcon icon={['fas', 'caret-up']} />
-                    </IncreaseBox>
-                    <DecreaseBox onClick={() => handleNumber(number, "Decrease")} >
-                        <FontAwesomeIcon icon={['fas', 'caret-down']} />
-                    </DecreaseBox>
-                </PackButton>
-            </PackNumber>
-        )
-    }
 
     const renderSplitText = (descript, index, arr) => {
         const last = arr.length
@@ -75,7 +57,7 @@ const Detail = () => {
                             <MainImage src={image} />
                         </MainImageBox>
                         <SecondImageBox>
-                            <SecondImage src={image} />
+                            <SecondImage href="" src={image} />
                             <SecondImage src={image} />
                         </SecondImageBox>
                         
@@ -114,7 +96,7 @@ const Detail = () => {
                         </PriceBox>
 
                         <PackHandle>
-                            {renderSetupNum(number)}
+                            <UpNumber number={number} handleNumber={handleNumber} />
                             <ButtonAdd onClick={() => addOrder(Array.from({length:number}, () => {
                                 return book
                             }))}>Add</ButtonAdd>
@@ -126,9 +108,8 @@ const Detail = () => {
 
                         <BoxShare>
                             <NormalDetailText>แชร์ : </NormalDetailText>
-                            <ImageIcon src={MailIcon} />
-                            <ImageIcon src={FacebookIcon} />
-                            <ImageIcon src={GoogleIcon} />
+                            <a href="https://facebook.com" target="_blank"><ImageIcon src={FacebookIcon} /></a>
+                            <a href="https://myaccount.google.com/profile" target="_blank"><ImageIcon src={GoogleIcon} /></a>
                             
                         </BoxShare>
                         
@@ -138,15 +119,18 @@ const Detail = () => {
 
                 </DetailBox>
             </Box9p>
-
-            <Box9p>
-
-            </Box9p>
             <SpaceBox />
+            <PackHandle>
+                <DescriptBox>
+                    <DescrtipText >เกี่ยวกับสินค้า</DescrtipText>
+                </DescriptBox>
+                <DescriptBox>
+                    <DescrtipText >รายละเอียด</DescrtipText>
+                </DescriptBox>
+            </PackHandle>
             <Underline />
-
-            <SpaceBox />
             <Box9p>
+                <TextDescrip>รายละเอียด: <TextTitleDes>{title}</TextTitleDes> </TextDescrip>
                 <Ptext>
                     {description.split('\n').map(renderSplitText)}
                 </Ptext>
@@ -238,59 +222,6 @@ const PriceDiscountText = styled.h2`
     font-size: clamp(14px, 1.8em, 8vw);
     color: gray;
 `
-
-const PackNumber = styled.div`
-    display: flex;
-    flex-shrink: 0;
-    width: 150px;
-    height: 55px;
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: #cccccc;
-    margin: 20px;
-    
-`
-const PackText = styled.div`
-    width: 80%;
-    height: 100%;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
-const PackButton = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    height: 100%;
-    background-color: transparent;
-`
-const DecreaseBox = styled.div`
-    width: 100%;
-    height: 50%;
-    background-color: transparent;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    :hover{
-        background-color: #adacac
-    }
-
-`
-const IncreaseBox = styled.div`
-    width: 100%;
-    height: 50%;
-    background-color: transparent;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-    :hover{
-        background-color: #adacac
-    }
-`
 const ButtonAdd = styled(Button)`
     background-color: #003cff;
     border: solid 2px #003cff;
@@ -330,6 +261,7 @@ const PackHandle = styled.div`
     width: 90%;
     padding: 0 5% 0 5%;
     flex-wrap: wrap;
+    align-items: center;
 
 `
 
@@ -352,6 +284,29 @@ const Ptext = styled.p`
 `
 const MainImage = styled.img`
     width: 80%;
+
+`
+const DescriptBox = styled.div`
+    display: flex;
+    border-bottom: solid 3px #003cff;
+    padding: 3px 5px 3px 5px;
+    width: 100px;
+    margin: 2px 5px 50px 5px;
+    justify-content: center;
+
+`
+const DescrtipText = styled.p`
+    margin: 0;
+    font-weight: bold;
+`
+const TextDescrip = styled.h3`
+    margin: 0;
+    font-weight: bold;
+    margin: 50px 30px 50px 0;
+    display: flex;
+`
+const TextTitleDes = styled.span`
+    margin-left: 20px;
 
 `
 

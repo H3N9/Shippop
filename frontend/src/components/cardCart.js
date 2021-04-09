@@ -1,11 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import stlyed from 'styled-components'
+import UpNumber from './upNumber'
 
 
 const CardCart = ({book}) => {
     const {image, title, price, discount} = book
     const priceWdiscount = price-discount
+
+    const lockClikcing = (n, command) => {
+        return null
+    }
 
     return (
         <CardCartBox>
@@ -21,10 +25,10 @@ const CardCart = ({book}) => {
                 {`THB${priceWdiscount.toFixed(2)}`}
             </TextBox>
             <TextBox>
-                
+                <UpNumber number={1} handleNumber={lockClikcing} />
             </TextBox>
             <TextBox>
-                
+                {`THB${priceWdiscount.toFixed(2)}`}
             </TextBox>
         </CardCartBox>
     )
@@ -49,6 +53,7 @@ const TextBox = styled.div`
 `
 const TitleBox = styled.div`
     width: 60%;
+    padding: 0 10px 0 10px;
     
 `
 const ImageBox = styled.div`

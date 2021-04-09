@@ -2,10 +2,26 @@ import React from 'react'
 import styled from 'styled-components'
 import {Button} from '../styles/styleComponents'
 import {Link} from 'react-router-dom'
+import {useOrderContext} from '../pages/index'
 
 
 const Modal = () => {
-    console.log("ss")
+    const { order } = useOrderContext()
+
+    const renderBook = (book) => {
+        return (
+            <Pack>
+                <AmountBox>
+                    {"1x"}
+                </AmountBox>
+                <ImageOrder src={book?.image} />
+                <TitleOrder>
+                    {book?.title}
+                </TitleOrder>
+            </Pack>
+        )
+    }
+
     return (
         <BoxModal>
             <BoxCover>
@@ -26,7 +42,9 @@ const Modal = () => {
             <Underline />
 
             <BoxCover>
-                
+                <Order>
+                    {order.map((book) => renderBook(book))}
+                </Order>
             </BoxCover>
             <Underline />
             <BoxCover>
@@ -94,6 +112,38 @@ const Underline = styled.div`
     width: 100%;
     height: 2px;
     background-color: gray;
+`
+const Order = styled.div`
+    width: 100%;
+    height: 100px;
+    background: white;
+    overflow-y: scroll;
+    margin: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+`
+
+const Pack = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+`
+const AmountBox = styled.div`
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+const ImageOrder = styled.img`
+    padding: 2.5%;
+    width: 20%;
+    object-fit: cover;
+`
+
+const TitleOrder = styled.div`
+    width: 60%;
 `
 
 

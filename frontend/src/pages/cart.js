@@ -4,10 +4,11 @@ import {Title, TitleText, Box9p, SpaceBox} from '../styles/styleComponents'
 import CardCart from '../components/cardCart'
 import { useOrderContext } from '../pages/index'
 import {Link} from 'react-router-dom'
+import Summary from '../components/summary'
 
 const Cart = () => {
     const { order, removeCart } = useOrderContext()
-
+    const totle = order.length > 0 ? order.reduce((book1, book2) => book1 + (book2['price'] - book2['discount']), 0):0
     return (
         <Box9p>
             <SpaceBox />
@@ -22,18 +23,18 @@ const Cart = () => {
                             <TextCartInfo>สินค้า</TextCartInfo>
                         </HeadTitle>
                         <HeadText>
-                            <TextCartInfo>สินค้า</TextCartInfo>
+                            <TextCartInfo>ราคา</TextCartInfo>
                         </HeadText>
                         <HeadText>
-                            <TextCartInfo>สินค้า</TextCartInfo>
+                            <TextCartInfo>จำนวน</TextCartInfo>
                         </HeadText>
                         <HeadText>
-                            <TextCartInfo>สินค้า</TextCartInfo>
+                            <TextCartInfo>ยอดรวม</TextCartInfo>
                         </HeadText>
                     </HeadTable>
 
                     <OrderBookBox>
-                        {order.map((book) => (<CardCart key={book.id} book={book}/>))}
+                        {order.map((book, index) => (<CardCart key={index} book={book}/>))}
                     </OrderBookBox>
 
                     <ButtonBox>
@@ -46,22 +47,25 @@ const Cart = () => {
                 </CartInfo>
 
                 <CartSummary>
-
+                    <Summary totle={totle} />
                 </CartSummary>
 
 
 
             </CartBox>
+            <SpaceBox />
         </Box9p>
     )
 }
 const CartBox = styled.div`
     width: 100%;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
 `
 
 const CartInfo = styled.div`
-    width: clamp(500px, 70%, 1000px);
+    width: clamp(700px, 70%, 1000px);
 `
 const HeadTable = styled.div`
     width: 100%;

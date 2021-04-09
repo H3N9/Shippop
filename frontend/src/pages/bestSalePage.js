@@ -31,6 +31,6 @@ const MainImage = styled.div`
     width: 100%;
     height: 500px;
     margin-bottom: 5vh;
-    background-color: red;
+    background-color: #f1f1f1;
 `
 export default BestSalePage
