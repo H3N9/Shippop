@@ -106,6 +106,11 @@ const ButtonOrder = styled(Button)`
     background-color: white;
     border: solid 3px #003cff;
     width: 255px;
+    color: #003cff;
+    :hover{
+        background-color: #003cff;
+        color: white;
+    }
 
 `
 const Underline = styled.div`

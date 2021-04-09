@@ -28,7 +28,7 @@ const BoxInput = styled.div`
 
 `
 const BoxLabelInput = styled.div`
-    width: 92%;
+    width: 92.5%;
     height: 60px;
     display: flex;
     margin: 10px;

@@ -1,8 +1,3 @@
-export const deviceJs = {
-    middle: `(max-width: 750px)`,
-    low: `(max-width: 450px)`,
-}
-
 
 export const apiGateway = async (url, get) => {
     const response = await fetch(url)
